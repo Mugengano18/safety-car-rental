@@ -1,0 +1,11 @@
+.ims{
+    display: none;
+    display: block;
+    filter: brightness(1.2);
+}
+.slide-frame{
+    box-sizing: border-box;
+    max-width: 500px;
+    padding: 0;
+    margin: 0;
+}
