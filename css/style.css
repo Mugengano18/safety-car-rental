@@ -8,7 +8,23 @@
     position: relative;
     margin: auto;
 } */
-body{
+nav{
+    margin: 10px;
+}
+nav ul{
+}
+nav ul li{
+    margin: 20px;
+    padding: 10px;
+    display: inline-block;
+    float: left;
+}
+nav ul li a{
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+}
+.contain{
     background-image: url('../ims/one.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
