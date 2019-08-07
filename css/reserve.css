@@ -1,6 +1,45 @@
-/* .contents{
-    /* margin-top: 20px; */
-/* } */
-/* .col-md-2{
- border-right: 1px solid black;
-} */ */
+.col-md-2{
+ /* border-right: 1px solid black; */
+ width: 100%;
+ position: relative;
+ right: 20px;
+ background-color: lightgray;
+} 
+nav ul li{
+    margin: 15px;
+    padding: 10px;
+    display: block;
+}
+nav ul li:hover{
+    background-color: darkblue;
+}
+nav ul li a{
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    font-family: 'Indie Flower', cursive;
+}
+nav ul li:hover{
+    color: white;
+}
+nav ul li a:hover{
+    text-decoration: none;
+    color: white;
+}
+h3{
+    text-align: center;
+
+}
+h1{
+    font-family: 'Calligraffitti';
+    text-transform: uppercase;
+    margin-top: 50px;
+    color: darkblue;
+    font-weight: 900;
+}
+p{
+    font-size: 20px;
+}
+#hide{
+    display: none;
+}
