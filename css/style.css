@@ -19,8 +19,13 @@ nav ul li a{
     color: black;
 }
 nav ul li:hover{
-    
+    color: white;
 }
+nav ul li a:hover{
+    text-decoration: none;
+    color: white
+}
+
 .top {
     background-image: url("../img/self-drive-thru-zambia-590x390.jpg");
     background-size:cover;
@@ -47,16 +52,24 @@ nav ul li:hover{
 #d, #e, #j, #a{
     font-size: 20px;
 }
+h4{
+    margin-left: 50px;
+    margin-top: 30px;
+}
 footer{
-    background-color: grey;
+    background-color: rgb(54, 52, 52);
+    color: white;
     position: relative;
+    margin: 20px;
 }
-.home{
-    width: 30px;
-    height: 3px;
-}
+
+   
 #h{
     position: relative;
     right:-60px;
     top: -30px;
+    margin-right: 10%;
+    margin-top: 20px;
+    text-align: center;
 }
+
