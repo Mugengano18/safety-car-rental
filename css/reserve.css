@@ -17,7 +17,6 @@ nav ul li a{
     font-size: 20px;
     text-decoration: none;
     color: black;
-    font-family: 'Indie Flower', cursive;
 }
 nav ul li:hover{
     color: white;
@@ -30,7 +29,7 @@ h3{
     text-align: center;
 
 }
-h1{
+h4, h1{
     font-family: 'Calligraffitti';
     text-transform: uppercase;
     margin-top: 50px;
@@ -40,6 +39,57 @@ h1{
 p{
     font-size: 20px;
 }
-#hide{
+#hide1,#hide2,#hide3,#hide4{
     display: none;
+    position: relative;
+    top: 10px;
+}
+label{
+    font-size: 20px;
+    position: relative;
+    top: 6px;
+    
+}
+#form{
+    text-align: center;
+    background-image: url('https://image.shutterstock.com/image-photo/young-woman-holding-car-key-600w-191118857.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 400PX;
+}
+input{
+    position: relative;
+    top: 6px;
+    width: 20%;
+    border: none;
+    border-bottom: 1px solid black;
+}
+textarea{
+    position: relative;
+    top: 20px;
+    width: 50%;
+    height: 150px;
+}
+button{
+    background-color: green;
+    border-radius: 40%;
+    border: none;
+    position: relative;
+    top: 20px;
+}
+button a{
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    font-size: 25px;
+    text-transform: uppercase;
+    padding: 10px;
+}
+button:hover{
+background-color: black;
+}
+button a:hover{
+    text-decoration: none;
+    color: white;
 }
