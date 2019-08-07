@@ -52,15 +52,17 @@ nav ul li a:hover{
 #d, #e, #j, #a{
     font-size: 20px;
 }
-h4{
+#pa{
     margin-left: 50px;
     margin-top: 30px;
+    text-align: center;
+    font-size: 20px;
 }
 footer{
     background-color: rgb(54, 52, 52);
     color: white;
     position: relative;
-    margin: 20px;
+    margin: 35px;
 }
 
    
@@ -71,5 +73,6 @@ footer{
     margin-right: 10%;
     margin-top: 20px;
     text-align: center;
+    font-size: 18px;
 }
 
