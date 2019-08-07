@@ -1,4 +1,26 @@
 
+.col-md-2{
+    width: 100%;
+    position: relative;
+    right: 20px;
+    background-color: lightgray;
+}
+nav ul li{
+    margin: 15px;
+    padding: 10px;
+    display: block;
+}
+nav ul li:hover{
+    background-color: darkblue;
+}
+nav ul li a{
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+}
+nav ul li:hover{
+    
+}
 .top {
     background-image: url("../img/self-drive-thru-zambia-590x390.jpg");
     background-size:cover;
@@ -25,10 +47,16 @@
 #d, #e, #j, #a{
     font-size: 20px;
 }
+footer{
+    background-color: grey;
+    position: relative;
+}
 .home{
     width: 30px;
     height: 3px;
 }
 #h{
-    margin-right: 3%;
+    position: relative;
+    right:-60px;
+    top: -30px;
 }
