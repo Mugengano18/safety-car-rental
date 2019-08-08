@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Reservation</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/reserve.css">
+    <!-- <link href='https://fonts.googleapis.com/css?family=Calligraffitti' rel='stylesheet'> -->
+    <link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <hr>
+                        <li><a href="aboutus.html">About us</a></li>
+                        <hr>
+                        <li><a href="reserve.html">reserve</a></li>
+                        <hr>
+                        <li><a href="register.html">register</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-md-10">
+                <h1 style="text-align:center;">transport companies and service providers in Rwanda</h1>
+                <div class="row">
+                    <div class="col-md-5">
+                        <h3>Rwanda Car Rental Services</h3>
+                        <img src="ims/2.jpg" height="300px" width="100%" id="im1" border-radius="40px">
+                        <p id="hide1">This is the most effective online transport group rental reservation company
+                            within
+                            Rwanda
+                            offering many different types of cars. They offer professional customer care service
+                            and
+                            treasure their clients as the business pillars. They provide all kinds of cars for
+                            those
+                            interested in self-drive and on demand they offer their expert drivers. Through
+                            reserving a
+                            car you may have an opportunity to obtain a number of discounted offers with regards to
+                            other services such as hotels plus lodges. Most of the car hire companies are well
+                            connected so they can provide you with whichever type of car you may want.
+
+                        </p>
+                    </div>
+                    <div class="col-md-5">
+                        <h3>Abacu vacations</h3>
+                        <img src="ims/3.jpg" height="300px" width="100%" id="im2">
+                        <P id="hide2">Abacus Vacations is a Uganda - Rwanda based local safari company that has for
+                            years lead
+                            Rwanda Safaris with the key value of providing the best memorable vacations of a life
+                            time
+                            in East Africa. We conduct a number of safaris to Rwanda all year round, they include
+                            luxury, Budget and group tours. For a memorable vacation ever it is ideal to combine
+                            your
+                            gorilla tracking tour in Rwanda with Uganda that's why we have put in place some of the
+                            possible Uganda - Rwanda Combined safari itinerary.
+                        </P>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-5">
+                        <h3>Premier T.Services</h3>
+                        <img src="ims/fo.jpg" width="100%" height="300px" id="im3">
+                        <p id="hide3">
+                            Did you know that it is possible to rent a car and get it right way. In few minutes,
+                            you
+                            can have a fully loaded 2016 V8 Land cruiser,
+                            BMW 10% DISCOUNT ON WEEKEND RENTAL!, 2016 BMW 750Lseries and latest 2016 starex
+                            minu van.</p>
+                    </div>
+                    <div class="col-md-5" style="position:relative; top: 30px;">
+                        <h3>Kigali car rentals</h3>
+                        <img src="ims/si.jpg" width="100%" height="300px" id="im4">
+                        <p id="hide4">Long term car rentals are good for moving from one place to another for
+                            various
+                            reasons which is part of human life and in simple term it is called transportation.
+                            There
+                            are various transport means used all over the world some people use their private cars,
+                            others use buses, trains, taxis and plane. However there is a developing traveling
+                            option
+                            for people today that is convenient, safe, comfortable and affordable called self drive
+                            car
+                            hire. Many people have embarked on this traveling option and it has been so useful to
+                            them
+                            in all sorts of situations like vacations, city touring, airport transfer, business
+                            trips
+                            and in case of your own car break down.</p>
+                    </div>
+                </div>
+                <div class="form">
+                    <h4 style="text-align: center; font-size: 20px;">Fill out this form to reserve a car</h4>
+                    <form id="form">
+                        <label>Your name:</label> <br>
+                        <input type="text" id="fname"> <br>
+                        <label>Phone no:</label> <br>
+                        <input type="text" id="number"> <br>
+                        <label>E-mail:</label> <br>
+                        <input type="email" id="email"> <br>
+                        <label>Name of company you want to reserve in</label> <br>
+                        <input type="text" id="company"> <br>
+                        <textarea name="" placeholder="Feedback..." id="sms"></textarea> <br>
+                    </form>
+                    <button type="submit" onclick="getElement()">RESERVE</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase-database.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyDG9mY2tYbClj4HPweDXXiuz8PU9v4SR9g",
+            authDomain: "carrentals-ee101.firebaseapp.com",
+            databaseURL: "https://carrentals-ee101.firebaseio.com",
+            projectId: "carrentals-ee101",
+            storageBucket: "",
+            messagingSenderId: "191577660945",
+            appId: "1:191577660945:web:4523d8b71cf66d3b"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        var database = firebase.database();
+        var ref = database.ref("reservation");
+        function getElement() {
+            var element = {
+                fname: document.getElementById("fname").value,
+                phone:document.getElementById("number").value,
+                company: document.getElementById("company").value,
+                message: document.getElementById("sms").value,
+            }
+            alert("thank you for making an order,we wil call you in a minute!!!");
+            ref.push(element);
+        }
+    </script>
+    <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/reserve.js"></script>
+</body>
+
+</html>
