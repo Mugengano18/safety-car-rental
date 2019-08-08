@@ -3,7 +3,7 @@
     position: relative;
     right: 20px;
     background-color:gray;
-    height: 2250px;
+    height: 2190px;
 
 }
 nav ul li{
@@ -119,4 +119,8 @@ footer{
     font-size: 18px;
    font-style: italic;
    
+}
+.foot{
+    text-align: center;
+    color: whitesmoke;
 }
