@@ -1,13 +1,8 @@
-/* .ims{
-    display: none;
-    filter: brightness(1.2);
+@media screen and (max-width: 360px){
+body{
+    height: 1000px;
 }
-.slide-frame{
-    box-sizing: border-box;
-    max-width: 1000px;
-    position: relative;
-    margin: auto;
-} */
+}
 nav{
     margin: 20px;
 }
