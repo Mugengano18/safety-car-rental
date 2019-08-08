@@ -9,6 +9,8 @@
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/register.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Grenze&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -17,10 +19,10 @@
             <div class="col-md-2">
                 <nav>
                     <ul>
-                        <li><a href="">Home</a></li>
-                        <li><a href="">About us</a></li>
-                        <li><a href="">Reserve</a></li>
-                        <li><a href="">Register</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="aboutus.html">About us</a></li>
+                        <li><a href="reserve.html">Reserve</a></li>
+                        <li><a href="register.html">Register</a></li>
                     </ul>
                 </nav>
             </div>
@@ -58,7 +60,7 @@
                             <label>Describe your business</label>
                             <textarea placeholder="write something about your business here..." id="message"></textarea>
                         </div>
-                        <button type="button" class="btn btn-light" onclick="getData()">Send</button>
+                        <button type="button" class="btn btn-light" onclick="getData()" id="data">Send</button>
                     </div>
                 </section>
                 <section class="footer">
@@ -76,36 +78,39 @@
         </div>
     </div>
     <!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/5.10.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase-database.js"></script>
 
-<!-- TODO: Add SDKs for Firebase products that you want to use
+    <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#config-web-app -->
 
-<script>
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyC2354yRmgch-GlscfquSQNAdv-MMhAPmc",
-    authDomain: "entering-6d547.firebaseapp.com",
-    databaseURL: "https://entering-6d547.firebaseio.com",
-    projectId: "entering-6d547",
-    storageBucket: "",
-    messagingSenderId: "332566135378",
-    appId: "1:332566135378:web:b0499c5d4c14da41"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-
-  function getData(name,email,phone,describe){
-      firebase.database().ref("/").set({
-          name:document.getElementById("name").value,
-          email:document.getElementById("email").value,
-          phone:document.getElementById("number").value,
-          describe:document.getElementById("message").value,
-      })
-  }
-  
-</script>
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyC2354yRmgch-GlscfquSQNAdv-MMhAPmc",
+            authDomain: "entering-6d547.firebaseapp.com",
+            databaseURL: "https://entering-6d547.firebaseio.com",
+            projectId: "entering-6d547",
+            storageBucket: "",
+            messagingSenderId: "332566135378",
+            appId: "1:332566135378:web:b0499c5d4c14da41"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        var database = firebase.database();
+        var ref= database.ref("registration");
+        function getData() {
+            var data = {
+                name: document.getElementById("name").value,
+                email: document.getElementById("email").value,
+                phone: document.getElementById("number").value,
+                describe: document.getElementById("message").value,
+            }
+            ref.push(data);
+        }
+    </script>
+    <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/register.js"></script>
 </body>
 
 </html>

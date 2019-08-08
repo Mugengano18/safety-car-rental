@@ -29,6 +29,7 @@ h1{
     text-align: center;
     margin-top: 30px;
     font-size: 40px;
+    font-family: 'Lora', serif;
 }
 .description p{
     text-align: center;
@@ -83,4 +84,11 @@ h1{
 .footer{
     background-color: aliceblue;
     text-align: center;
+    font-family: 'Grenze', serif;
+}
+.footer h2{
+    font-size: 40px;
+}
+.footer label{
+    font-weight: bolder;
 }
