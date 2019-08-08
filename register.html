@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registering form</title>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/register.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Grenze&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="aboutus.html">About us</a></li>
+                        <li><a href="reserve.html">Reserve</a></li>
+                        <li><a href="register.html">Register</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-md-10">
+                <section class="description">
+                    <h1>Why Register</h1>
+                    <p>safety car rentals is a really trustable company because while working with you, we make sure
+                        to get you in touch with most of the clients,and also our most target is to help you get
+                        your business develop and earn profit by getting you clients form both within the country
+                        and foreigners.With us you will not struggle finding people for them to rent your cars
+                        because,many
+                        of
+                        the foreign people are searching for good cars to rent and for different purposes.So just trust
+                        us
+                        and
+                        incase you are interested just give us a call.</p>
+                </section>
+                <hr>
+                <section class="form">
+                    <h2>Register Below</h2>
+                    <div class="register-form">
+                        <div class="textb">
+                            <label>Your Name</label>
+                            <input type="text" id="name" placeholder="Enter your name...">
+                        </div>
+                        <div class="textb">
+                            <label>Your Email</label>
+                            <input type="text" id="email" placeholder="Enter your email...">
+                        </div>
+                        <div class="textb">
+                            <label>Your phone no</label>
+                            <input type="text" id="number" placeholder="Enter your phone nbr...">
+                        </div>
+                        <div class="textb">
+                            <label>Describe your business</label>
+                            <textarea placeholder="write something about your business here..." id="message"></textarea>
+                        </div>
+                        <button type="button" class="btn btn-light" onclick="getData()" id="data">Send</button>
+                    </div>
+                </section>
+                <section class="footer">
+                    <footer>
+                        <h2>contact us for more infos</h2>
+                        <hr width="600">
+                        <p>Tel nbr:078745637/073456255</p>
+                        <hr width="600">
+                        <p>Email:safetycar@.gmail.com</p>
+                        <hr>
+                    </footer>
+                </section>
+            </div>
+
+        </div>
+    </div>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase-database.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyC2354yRmgch-GlscfquSQNAdv-MMhAPmc",
+            authDomain: "entering-6d547.firebaseapp.com",
+            databaseURL: "https://entering-6d547.firebaseio.com",
+            projectId: "entering-6d547",
+            storageBucket: "",
+            messagingSenderId: "332566135378",
+            appId: "1:332566135378:web:b0499c5d4c14da41"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        var database = firebase.database();
+        var ref= database.ref("registration");
+        function getData() {
+            var data = {
+                name: document.getElementById("name").value,
+                email: document.getElementById("email").value,
+                phone: document.getElementById("number").value,
+                describe: document.getElementById("message").value,
+            }
+            ref.push(data);
+        }
+    </script>
+    <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/register.js"></script>
+</body>
+
+</html>
