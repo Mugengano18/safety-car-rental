@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Reservation</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/reserve.css">
-    <link href='https://fonts.googleapis.com/css?family=Calligraffitti' rel='stylesheet'>
+    <!-- <link href='https://fonts.googleapis.com/css?family=Calligraffitti' rel='stylesheet'> -->
+    <link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -19,16 +20,16 @@
                     <ul>
                         <li><a href="index.html">HOME</a></li>
                         <hr>
-                        <li><a href="">ABOUT US</a></li>
+                        <li><a href="aboutus.html">ABOUT US</a></li>
                         <hr>
                         <li><a href="reserve.html">RESERVE</a></li>
                         <hr>
-                        <li><a href="">REGISTER</a></li>
+                        <li><a href="register.html">REGISTER</a></li>
                     </ul>
                 </nav>
             </div>
             <div class="col-md-10">
-                <h1 style="text-align:center;">transport companies and service porviders in Rwanda</h1>
+                <h1 style="text-align:center;">transport companies and service providers in Rwanda</h1>
                 <div class="row">
                     <div class="col-md-5">
                         <h3>Rwanda Car Rental Services</h3>
@@ -96,22 +97,22 @@
                 <div class="form">
                     <h4 style="text-align: center; font-size: 20px;">Fill out this form to reserve a car</h4>
                     <form id="form">
-                        <label>First name</label> <br>
+                        <label>Your name:</label> <br>
                         <input type="text" id="fname"> <br>
-                        <label>Last name</label> <br>
-                        <input type="text" id="lname"> <br>
-                        <label>E-mail</label> <br>
+                        <label>Phone no:</label> <br>
+                        <input type="text" id="number"> <br>
+                        <label>E-mail:</label> <br>
                         <input type="email" id="email"> <br>
-                        <label>Name of company</label> <br>
+                        <label>Name of company you want to reserve in</label> <br>
                         <input type="text" id="company"> <br>
-                        <textarea name="" placeholder="More details about your reservation..." id="sms"></textarea> <br>
-                        <button type="submit" onclick="reserve()">RESERVE</button>
+                        <textarea name="" placeholder="Feedback..." id="sms"></textarea> <br>
                     </form>
+                    <button type="submit" onclick="getElement()">RESERVE</button>
                 </div>
             </div>
         </div>
     </div>
-    
+
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase-database.js"></script>
@@ -122,29 +123,31 @@
     <script>
         // Your web app's Firebase configuration
         var firebaseConfig = {
-            apiKey: "AIzaSyBFoqLTm0EOfnZYDIczqLicWCiGddv0OY8",
-            authDomain: "reserve-60923.firebaseapp.com",
-            databaseURL: "https://reserve-60923.firebaseio.com",
-            projectId: "reserve-60923",
+            apiKey: "AIzaSyDG9mY2tYbClj4HPweDXXiuz8PU9v4SR9g",
+            authDomain: "carrentals-ee101.firebaseapp.com",
+            databaseURL: "https://carrentals-ee101.firebaseio.com",
+            projectId: "carrentals-ee101",
             storageBucket: "",
-            messagingSenderId: "867255622951",
-            appId: "1:867255622951:web:242586a0db29fa2c"
+            messagingSenderId: "191577660945",
+            appId: "1:191577660945:web:4523d8b71cf66d3b"
         };
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
 
-
-        function reserve(fname,lname,email,company,message){
-            firebase.database().ref("/").set({
-                fname:document.getElementById("fname").value,
-                lname:document.getElementById("lname").value,
-                email:document.getElementById("email").value,
-                company:document.getElementById("company").value,
-                message:document.getElementById("sms").value,
-
-            })
+        var database = firebase.database();
+        var ref = database.ref("reservation");
+        function getElement() {
+            var element = {
+                fname: document.getElementById("fname").value,
+                phone:document.getElementById("number").value,
+                company: document.getElementById("company").value,
+                message: document.getElementById("sms").value,
+            }
+            alert("thank you for making an order,we wil call you in a minute!!!");
+            ref.push(element);
         }
     </script>
+    <script src="js/jquery-3.4.1.js"></script>
     <script src="js/reserve.js"></script>
 </body>
 

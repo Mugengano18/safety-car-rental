@@ -14,7 +14,7 @@ nav ul li:hover{
     background-color: lightgray;
 }
 nav ul li a{
-    font-size: 20px;
+    font-size: 18px;
     text-decoration: none;
     color: black;
 }
@@ -29,7 +29,8 @@ h3{
 
 }
 h4, h1{
-    font-family: 'Calligraffitti';
+    /* font-family: 'Calligraffitti'; */
+    font-family: 'Acme', sans-serif;
     text-transform: uppercase;
     margin-top: 50px;
     color: darkblue;
@@ -47,11 +48,12 @@ label{
     font-size: 20px;
     position: relative;
     top: 6px;
+    color: white;
     
 }
 #form{
     text-align: center;
-    background-image: url('../ims/right.jpg');
+    background-image: url('../ims/logo.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
@@ -63,19 +65,22 @@ input{
     width: 20%;
     border: none;
     border-bottom: 1px solid black;
+    border-radius: 4px;
 }
 textarea{
     position: relative;
     top: 20px;
     width: 50%;
     height: 150px;
+    border-radius: 7px;
 }
 button{
     background-color: green;
     border-radius: 40%;
-    border: none;
+    /* border: none; */
     position: relative;
-    top: 20px;
+    bottom: 40px;
+    left: 500px;
 }
 button a{
     text-decoration: none;
@@ -87,6 +92,7 @@ button a{
 }
 button:hover{
 background-color: black;
+color: white;
 }
 button a:hover{
     text-decoration: none;
