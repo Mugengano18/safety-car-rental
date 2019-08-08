@@ -12,7 +12,8 @@
 
 ## Description
 
-__SAFETY CAR RENTALS__ is web application made to help peaple explore different places of our country Rwanda by connecting them to different transport companies and service providers.
+__SAFETY CAR RENTALS__ 
+is web application made to help peaple explore different places of our country Rwanda by connecting them to different transport companies and service providers.
 
 Not only the customers are the one to benefit but also the transport companies and sevice providers get the opportunity of adverstising their services hence an increase in the number of 
 their customers.
@@ -34,6 +35,9 @@ their customers.
 - *Git and Github platform*
 
 - *Database server*
+- *html*
+- *css*
+- Javascript
 
 ## Active link
 
