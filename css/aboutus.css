@@ -1,9 +1,9 @@
 
 .col-md-2{
-
     position: relative;
     right: 20px;
     background-color:gray;
+    height: 2250px;
 
 }
 nav ul li{
@@ -37,18 +37,29 @@ nav ul li a:hover{
     font-size: 20px;
     font-weight:bold;
   }
+  .top h1{
+    font-family: 'Acme', sans-serif;
+  }
+  .top p{
+    font-family: 'Acme', sans-serif;
+  }
 #par{
     float: right;
-    font-size: 18px;
+    font-size: 20px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: bolder;
 }
 #para{
     float: right;
     font-size: 18px;
+    /* font-family: 'Comfortaa', cursive; */
+    font-family: 'Acme', sans-serif;
 }
 #p{
     text-align: center;
     font-size: 40px;
     color: rgb(96, 97, 105);
+    font-family: 'Rajdhani', sans-serif;
 }
 #d, #e, #j, #a{
     font-size: 20px;
@@ -59,10 +70,11 @@ nav ul li a:hover{
     text-align: center;
     font-size: 30px;
     color: white;
+    font-family: 'Cinzel', serif;
 }
 footer{
     background-color: rgb(54, 52, 52);
-    position: relative;
+    height: 540px;
    
 }
 #f{
@@ -101,4 +113,10 @@ footer{
 }
 .social a:hover{
     transform: scale(1.2);
+}
+#hide1,#hide2,#hide3,#hide4{
+    /* display: none; */
+    font-size: 18px;
+   font-style: italic;
+   
 }
