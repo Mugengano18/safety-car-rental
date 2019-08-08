@@ -1,0 +1,79 @@
+
+.col-md-2{
+    width: 100%;
+    position: relative;
+    right: 20px;
+    background-color: lightgray;
+}
+nav ul li{
+    margin: 15px;
+    padding: 10px;
+    display: block;
+}
+nav ul li:hover{
+    background-color: darkblue;
+}
+nav ul li a{
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+}
+nav ul li:hover{
+    color: white;
+}
+nav ul li a:hover{
+    text-decoration: none;
+    color: white
+}
+
+.top {
+    background-image: url("../img/self-drive-thru-zambia-590x390.jpg");
+    background-size:cover;
+    width:100%;
+    height: 400px;
+    color: black;
+    text-align: center;
+    font-size: 20px;
+    font-weight:bold;
+  }
+#par{
+    float: right;
+    font-size: 18px;
+}
+#para{
+    float: right;
+    font-size: 18px;
+}
+#p{
+    text-align: center;
+    font-size: 40px;
+    color: rgb(96, 97, 105);
+}
+#d, #e, #j, #a{
+    font-size: 20px;
+}
+#pa{
+    margin-left: 50px;
+    margin-top: 30px;
+    text-align: center;
+    font-size: 30px;
+    color: white;
+}
+footer{
+    background-color: rgb(54, 52, 52);
+    position: relative;
+    margin: 35px;
+}
+
+   
+#h{
+    position: relative;
+    right:-60px;
+    top: -30px;
+    margin-right: 10%;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 18px;
+    color: rgb(127, 127, 133);
+}
+
